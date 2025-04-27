@@ -229,7 +229,15 @@ fun miFuncionSuma(a:Int, b:Int) : Int{  //  Sintaxis: fun name(a:Type, b:Type) :
     return a+b
 }
 fun classes(){
+    val santiago = Programador("Santiago",16, listOf(Programador.Languages.PYTHON, Programador.Languages.KOTLIN,
+        Programador.Languages.JAVASCRIPT))
 
+    println("Soy ${santiago.name}")
+    santiago.code()
+
+    val pepe = Programador("Pepe", 20, listOf(Programador.Languages.JAVA, Programador.Languages.HTML), listOf(santiago))
+    println("\nSoy ${pepe.name}")
+    pepe.code()
 }
 
 fun main() {
