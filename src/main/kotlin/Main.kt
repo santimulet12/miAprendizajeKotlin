@@ -235,9 +235,15 @@ fun classes(){
     println("Soy ${santiago.name}")
     santiago.code()
 
-    val pepe = Programador("Pepe", 20, listOf(Programador.Languages.JAVA, Programador.Languages.HTML), listOf(santiago))
+    val pepe = Programador("Pepe", 20, listOf(Programador.Languages.JAVA, Programador.Languages.HTML),listOf(santiago))
     println("\nSoy ${pepe.name}")
     pepe.code()
+
+    if (pepe.friends?.first()?.name == null){
+        println("${pepe.name} no tiene amigos")
+    }else{
+        println("${pepe.friends.first().name} es amigo de ${pepe.name}")
+    }
 }
 
 fun main() {
